@@ -6,7 +6,7 @@ import React from 'react';
 const Navbar = () => {
   const params = usePathname();
 
-  if(!params.includes("dashboard")){
+  if(!params?.includes("dashboard")){
     return (
         <nav className='w-10/12 mx-auto'>
           <ul className='flex justify-between'>
