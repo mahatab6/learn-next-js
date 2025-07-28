@@ -5,7 +5,6 @@ import React from 'react';
 
 const Navbar = () => {
   const params = usePathname();
-  console.log(params, );
 
   if(!params.includes("dashboard")){
     return (
