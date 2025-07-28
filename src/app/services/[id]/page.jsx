@@ -1,3 +1,4 @@
+import Notfound404 from '@/app/not-found';
 import React from 'react'
 
 export default function details({ params }) {
@@ -24,14 +25,22 @@ export default function details({ params }) {
     },
     ];
 
-    const searchId = services.find((d)=> id == id)
+    const searchId = services.find((d)=> d.id === id);
+    if(searchId){
+        return (
+            <div>
+                <h1>{searchId?.name}</h1>
+                <img src={searchId?.image} alt="" />
+                <p>{searchId?.description}</p>
+            </div>
+        )
+    }
+    else{
+        return (
+         Notfound404()
+        );
+    }
 
 
-  return (
-    <div>
-        <h1>{searchId?.name}</h1>
-        <img src={searchId?.image} alt="" />
-        <p>{searchId?.description}</p>
-    </div>
-  )
+ 
 }
