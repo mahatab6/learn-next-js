@@ -1,7 +1,13 @@
+"use client"
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import React from 'react';
 
 const Navbar = () => {
+  const params = usePathname();
+  console.log(params, );
+
+  if(!params.includes("dashboard")){
     return (
         <nav className='w-10/12 mx-auto'>
           <ul className='flex justify-between'>
@@ -17,6 +23,10 @@ const Navbar = () => {
           </ul>
         </nav>
     );
+  } else{
+    return <></>;
+  }
+    
 };
 
 export default Navbar;
