@@ -28,6 +28,7 @@ export default function RootLayout({ children }) {
         </main>
         <footer>
           <p>This is footer section</p>
+          <p>2025 @ copyright</p>
         </footer>
       </body>
     </html>
